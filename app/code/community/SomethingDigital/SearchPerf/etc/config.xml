@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <SomethingDigital_SearchPerf>
+            <version>0.2.0</version>
+        </SomethingDigital_SearchPerf>
+    </modules>
+    <global>
+        <models>
+            <enterprise_catalogsearch>
+                <rewrite>
+                    <index_action_fulltext_refresh>SomethingDigital_SearchPerf_Model_Index_Action_Fulltext_Refresh</index_action_fulltext_refresh>
+                </rewrite>
+            </enterprise_catalogsearch>
+            <catalogsearch_resource>
+                <rewrite>
+                    <query>SomethingDigital_SearchPerf_Model_Resource_Query</query>
+                    <fulltext>SomethingDigital_SearchPerf_Model_Resource_Fulltext</fulltext>
+                </rewrite>
+            </catalogsearch_resource>
+        </models>
+        <resources>
+            <sd_searchperf_setup>
+                <setup>
+                    <module>SomethingDigital_SearchPerf</module>
+                </setup>
+            </sd_searchperf_setup>
+        </resources>
+    </global>
+</config>
