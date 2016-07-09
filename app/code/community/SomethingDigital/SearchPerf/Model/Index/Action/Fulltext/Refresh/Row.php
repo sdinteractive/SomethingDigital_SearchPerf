@@ -1,0 +1,6 @@
+<?php
+
+class SomethingDigital_SearchPerf_Model_Index_Action_Fulltext_Refresh_Row extends Enterprise_CatalogSearch_Model_Index_Action_Fulltext_Refresh_Row
+{
+    use SomethingDigital_SearchPerf_Trait_ResetsSearchResults;
+}
