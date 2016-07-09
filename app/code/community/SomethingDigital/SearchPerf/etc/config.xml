@@ -10,6 +10,8 @@
             <enterprise_catalogsearch>
                 <rewrite>
                     <index_action_fulltext_refresh>SomethingDigital_SearchPerf_Model_Index_Action_Fulltext_Refresh</index_action_fulltext_refresh>
+                    <index_action_fulltext_refresh_changelog>SomethingDigital_SearchPerf_Model_Index_Action_Fulltext_Refresh_Changelog</index_action_fulltext_refresh_changelog>
+                    <index_action_fulltext_refresh_row>SomethingDigital_SearchPerf_Model_Index_Action_Fulltext_Refresh_Row</index_action_fulltext_refresh_row>
                 </rewrite>
             </enterprise_catalogsearch>
             <catalogsearch_resource>
