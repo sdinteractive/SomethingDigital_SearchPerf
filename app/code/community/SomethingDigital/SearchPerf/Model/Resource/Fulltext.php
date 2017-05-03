@@ -2,6 +2,8 @@
 
 class SomethingDigital_SearchPerf_Model_Resource_Fulltext extends Mage_CatalogSearch_Model_Resource_Fulltext
 {
+    use SomethingDigital_SearchPerf_Trait_ResetsSearchResults;
+
     /**
      * Reset search results
      *
@@ -13,10 +15,7 @@ class SomethingDigital_SearchPerf_Model_Resource_Fulltext extends Mage_CatalogSe
      */
     public function resetSearchResults()
     {
-        $adapter = $this->_getWriteAdapter();
-        $adapter->update($this->getTable('catalogsearch/search_query'), array('is_processed' => 0), array('is_processed != 0'));
-        $adapter->delete($this->getTable('catalogsearch/result'));
-
+        $this->_doResetQueries();
         Mage::dispatchEvent('catalogsearch_reset_search_result');
 
         return $this;
